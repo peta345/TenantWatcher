@@ -1,0 +1,25 @@
+{
+  "name": "TenantWatcher",
+  "manifest_version": 2,
+  "description": "extension for SentinelOne",
+  "author": "Kazy",
+  "version": "0.0.1",
+  "content_scripts": [{
+        "matches": ["https://*/analyze/threats/*/overview"],
+        "js": ["lib/jquery-3.3.1.min.js"]
+        //"css": ["content_scripts.css"]
+   }],
+  "permissions" : ["management", "tabs", "storage", "webNavigation", "https://*/analyze/threats/*/overview"],
+  "browser_action" : {
+        "default_title": "TenantWatcher",
+        "default_popup": "popup.html"
+    },
+  "background": {
+    "scripts": ["lib/jquery-3.3.1.min.js","js/background.js"]
+  },
+  "icons": {
+    "16": "img/2.png",
+    "48": "img/2.png",
+    "128": "img/2.png"
+  }
+}
