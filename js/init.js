@@ -6,7 +6,7 @@ $(function() {
    		});
 
 	    chrome.storage.local.get(['hash'], function(result) {
-            const q = "http://127.0.0.1:5000/q/" + result.hash
+            const q = "http://1.1.1.1/q/" + result.hash
             $("#hash-val").attr("href", q);
             $("#current").text(result.hash);
         });

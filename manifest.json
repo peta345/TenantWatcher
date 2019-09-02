@@ -7,7 +7,6 @@
   "content_scripts": [{
         "matches": ["https://*/analyze/threats/*/overview"],
         "js": ["lib/jquery-3.3.1.min.js"]
-        //"css": ["content_scripts.css"]
    }],
   "permissions" : ["management", "tabs", "storage", "webNavigation", "https://*/analyze/threats/*/overview"],
   "browser_action" : {
@@ -15,7 +14,8 @@
         "default_popup": "popup.html"
     },
   "background": {
-    "scripts": ["lib/jquery-3.3.1.min.js","js/background.js"]
+    "scripts": ["lib/jquery-3.3.1.min.js","js/background.js"],
+    "persistent": false
   },
   "icons": {
     "16": "img/2.png",
